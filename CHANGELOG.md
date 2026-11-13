@@ -1,5 +1,7 @@
 # Changelog
 
+All notable changes to this project. Downloads and notes for each version: [Releases](https://github.com/Aleksa5000/mock-interview/releases).
+
 ## 0.3.0 — 2026-11-13
 - Job ad mode: paste a job ad to get questions for every must-have requirement, a job match table (shown / partial / gap), the top 3 things to prepare and a fit pitch.
 - Progress tracking: reads earlier reports, includes your weakest categories, and shows a before/after table. `/mock-interview retry` re-asks questions scored 3 or less.
