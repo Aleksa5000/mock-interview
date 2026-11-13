@@ -129,6 +129,10 @@ Your feedback decides what gets improved next.
 - Have an idea? [Suggest it](https://github.com/Aleksa5000/mock-interview/issues/new?template=feature_request.yml).
 - Questions and results go in [Discussions](https://github.com/Aleksa5000/mock-interview/discussions).
 
+## 🧩 Works great with
+
+**[explain-stack](https://github.com/Aleksa5000/explain-stack)** explains *why* your project uses each technology, with real file references. Run `/explain-stack` first to understand your stack, then `/mock-interview` to practice explaining it.
+
 ## 🤝 Contributing
 
 Ideas, new question categories and translations are welcome. Open an issue or PR.
