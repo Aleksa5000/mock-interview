@@ -1,5 +1,5 @@
 name: Feedback
-description: Tell us how your mock interview went: what helped and what didn't.
+description: "Tell us how your mock interview went: what helped and what didn't."
 title: "[Feedback] "
 labels: ["feedback"]
 body:
