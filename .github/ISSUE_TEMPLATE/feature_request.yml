@@ -1,0 +1,21 @@
+name: Idea / feature request
+description: Suggest a new question category, role, language or feature.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's your idea?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help?
+      description: What kind of interview or situation is it for?
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: An example question, flow or output, if you have one.

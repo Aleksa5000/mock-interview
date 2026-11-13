@@ -1,0 +1,47 @@
+name: Feedback
+description: Tell us how your mock interview went: what helped and what didn't.
+title: "[Feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve mock-interview! Please **don't paste your code or full answers**, a short description is enough.
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Overall, how useful was the interview?
+      options:
+        - "5 - Very useful"
+        - "4 - Useful"
+        - "3 - OK"
+        - "2 - Not very useful"
+        - "1 - Not useful"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Skill version
+      placeholder: "0.2.0"
+  - type: input
+    id: session
+    attributes:
+      label: Session
+      description: Role / level, mode, number of questions, language, project or general.
+      placeholder: "Junior Full-stack · Practice · 10 questions · English · own project"
+  - type: textarea
+    id: helpful
+    attributes:
+      label: What was most helpful?
+  - type: textarea
+    id: improve
+    attributes:
+      label: What should be better?
+      description: Questions that felt off, unfair scoring, wrong facts about your project, too long/short, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: ideas
+    attributes:
+      label: Anything you wish it did?

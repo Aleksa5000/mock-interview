@@ -65,6 +65,12 @@ When the planned questions are done (or the user types `end`):
 4. Save the full report using `references/report-template.md` to `interview-reports/mock-interview-YYYY-MM-DD-HHMM.md` in the current directory (create the folder; use local time). If writing is not possible, print the report in chat instead.
 5. Tell the user where it was saved. If the directory is a git repo and `interview-reports/` is not ignored, suggest adding it to `.gitignore` (don't edit it without asking).
 6. Offer: "Want to retry the weakest questions now?"
+7. **Ask for feedback once**, as the last line of the wrap-up, in the user's language. Keep it to one or two lines and don't push. Give a prefilled link to the GitHub feedback form:
+
+   `https://github.com/Aleksa5000/mock-interview/issues/new?template=feedback.yml&version=0.2.0&session=<SESSION>`
+
+   `<SESSION>` is a short **percent-encoded** summary with no code, no answers and no project names, e.g. `Junior Full-stack · Practice · 10 questions · English · own project` (use `general` instead of `own project` when there was no project). Example line: "Did this help? Tell me what to improve (takes 1 minute): <link>". Never send anything yourself. The user opens the link, sees everything, and decides whether to submit.
+   If the user retries questions afterwards, don't ask again in the same session.
 
 ## Boundaries
 

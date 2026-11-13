@@ -120,12 +120,23 @@ See a full sample report in [`examples/sample-report.md`](examples/sample-report
 
 **Can I use it without a project?** Yes. It will ask for your role and stack.
 
+## 💬 Feedback
+
+Your feedback decides what gets improved next.
+- At the end of each interview, the skill shows a **prefilled feedback link** once. It contains only your role, mode, number of questions and language. **Nothing is sent automatically**: you see the form and choose whether to submit it.
+- Or use the [feedback form](https://github.com/Aleksa5000/mock-interview/issues/new?template=feedback.yml) directly.
+- Found a bug? [Report it](https://github.com/Aleksa5000/mock-interview/issues/new?template=bug_report.yml).
+- Have an idea? [Suggest it](https://github.com/Aleksa5000/mock-interview/issues/new?template=feature_request.yml).
+- Questions and results go in [Discussions](https://github.com/Aleksa5000/mock-interview/discussions).
+
 ## 🤝 Contributing
 
 Ideas, new question categories and translations are welcome. Open an issue or PR.
 The skill lives in [`skills/mock-interview/`](skills/mock-interview/):
 - `SKILL.md` is the main flow
 - `references/` holds the question bank, the scoring rubric, the project analysis steps and the report template
+
+When releasing, bump the version in `.claude-plugin/plugin.json`, in the feedback link in `SKILL.md` (Phase 5), and in `CHANGELOG.md`.
 
 If this helped you prepare, please ⭐ the repo so more people can find it.
 
