@@ -1,0 +1,22 @@
+{
+  "name": "mock-interview",
+  "displayName": "Mock Interview",
+  "version": "0.1.0",
+  "description": "Realistic mock job interviews grounded in your own project. Scores every answer, shows a stronger model answer and saves a Markdown report.",
+  "author": {
+    "name": "Aleksa Djorovic",
+    "url": "https://github.com/Aleksa5000"
+  },
+  "homepage": "https://github.com/Aleksa5000/mock-interview",
+  "repository": "https://github.com/Aleksa5000/mock-interview",
+  "license": "MIT",
+  "keywords": [
+    "interview",
+    "mock-interview",
+    "job-interview",
+    "interview-prep",
+    "career",
+    "vibe-coding",
+    "learning"
+  ]
+}

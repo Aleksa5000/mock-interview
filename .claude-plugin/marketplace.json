@@ -1,0 +1,15 @@
+{
+  "name": "mock-interview",
+  "description": "Mock job interview practice for developers and vibe coders, as a Claude Code skill.",
+  "owner": {
+    "name": "Aleksa Djorovic",
+    "url": "https://github.com/Aleksa5000"
+  },
+  "plugins": [
+    {
+      "name": "mock-interview",
+      "source": "./",
+      "description": "Realistic mock job interviews grounded in your own project, with scored feedback and model answers."
+    }
+  ]
+}
