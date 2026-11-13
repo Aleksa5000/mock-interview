@@ -95,7 +95,11 @@ See a full sample report in [`examples/sample-report.md`](examples/sample-report
 
 ## ❓ FAQ
 
-**Does it change my code?** No. It only reads your project. The one file it writes is the report in `interview-reports/` (you may want to add that folder to `.gitignore`).
+**Does it change my code?** No. It only reads your project. The one file it writes is the report in `interview-reports/` (you may want to add that folder to `.gitignore`). If you ask it to change your code mid-interview, it offers to end the interview first, so you don't end up with code you can't explain.
+
+**Does it read my secrets?** No. It skips `.env` files, keys, credentials and databases, and it uses read-only tools to scan the project.
+
+**Can it run my live-coding answer?** Sometimes. If Node or Python is available, it may run your self-contained snippet to confirm a bug, and it tells you when it does.
 
 **Does it run my code?** No. It won't run builds, tests or installs unless you ask.
 

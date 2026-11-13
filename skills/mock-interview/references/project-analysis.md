@@ -2,13 +2,20 @@
 
 Goal: in a few minutes and with read-only tools, understand the project well enough to ask questions a real interviewer would ask after reading this repo on the candidate's CV. Keep it fast — don't read the whole codebase.
 
+## Ground rules
+
+- **Use the Read, Glob and Grep tools**, not shell commands like `cat`, `head`, `sed`, `find` or `wc`. They work on every OS and don't trigger permission prompts. Only use the shell for `git log` / `git status` / `git shortlog`.
+- **Never open secrets:** `.env`, `.env.local`, `.env.production` (anything `.env*` except `.env.example` / `.env.sample`), `*.pem`, `*.key`, `id_rsa*`, `credentials*.json`, `secrets.*`, `*.p12`, cookie/session dumps, database files (`*.db`, `*.sqlite`) or backup folders. If you notice a secret file is committed to git, that is a good interview question ("How do you manage secrets?"); never quote its content.
+- **Skip noise:** `node_modules/`, `.venv/`, `venv/`, `dist/`, `build/`, `.next/`, `__pycache__/`, `vendor/`, `target/`, lock files (only check they exist), binaries, images, datasets, office files.
+- **Budget:** about 10–15 file reads total. Read the relevant part of a big file (use offset/limit or Grep), not the whole thing.
+
 ## 1. Scan (read-only)
 
 1. **Top level:** list the root directory. Note monorepo signs (`apps/`, `packages/`, `pnpm-workspace.yaml`).
 2. **README / docs:** read `README*` and anything like `docs/`, `ARCHITECTURE*`, `CLAUDE.md`, `AGENTS.md`. These say what the project is *supposed* to do.
 3. **Manifests** (whichever exist): `package.json`, `pnpm-lock.yaml`/`yarn.lock`, `pyproject.toml`, `requirements.txt`, `go.mod`, `Cargo.toml`, `pom.xml`, `build.gradle*`, `composer.json`, `Gemfile`, `*.csproj`, `pubspec.yaml`. Extract: language, framework, key libraries (DB/ORM, auth, state, UI, testing, AI SDKs).
 4. **Infra & config:** `Dockerfile`, `docker-compose*`, `.github/workflows/`, `vercel.json`, `netlify.toml`, `.env.example`, DB schema/migrations (`prisma/schema.prisma`, `migrations/`, `supabase/`).
-5. **History:** `git log --oneline -20` and `git log --format='%an' | sort | uniq -c` (solo vs team). Skip if not a git repo.
+5. **History:** `git log --oneline -20` and `git shortlog -sn --all` (solo vs team). If it's not a git repo, skip this and consider asking "How do you version and back up this project?"
 6. **Key files (3–6):** entry point, a core domain module, an API route/handler, a data model, and one test file if tests exist. Prefer files that show decisions (auth, payments, data fetching, state management, error handling).
 
 ## 2. Build the private project brief
