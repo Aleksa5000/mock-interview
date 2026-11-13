@@ -1,6 +1,19 @@
-# 🎤 mock-interview
+<p align="center">
+  <img src="docs/logo.svg" alt="mock-interview logo" width="120">
+</p>
 
-**Practice job interviews about *your own* project, right in Claude Code.**
+<h1 align="center">mock-interview</h1>
+
+<p align="center">
+  <b>Practice job interviews about <i>your own</i> project, right in Claude Code.</b><br>
+  <a href="https://github.com/Aleksa5000/mock-interview/stargazers"><img src="https://img.shields.io/github/stars/Aleksa5000/mock-interview?style=flat" alt="stars"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT license"></a>
+  <a href="https://github.com/Aleksa5000/mock-interview/releases"><img src="https://img.shields.io/github/v/release/Aleksa5000/mock-interview" alt="release"></a>
+</p>
+
+<p align="center">
+  <img src="docs/demo.gif" alt="mock-interview demo: a question about the user's checkout code, a weak answer, then a score, what was missing and a stronger answer" width="760">
+</p>
 
 You built something, maybe with a lot of help from AI. Can you explain it to an interviewer? `mock-interview` reads your project, interviews you like a real hiring manager, scores every answer, shows you a stronger way to say it, and saves a report so you can track your progress.
 

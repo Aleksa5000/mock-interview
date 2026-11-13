@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="mock-interview logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="225" fill="url(#bg)"/>
+  <!-- interviewer bubble -->
+  <rect x="133" y="164" width="604" height="430" rx="82" fill="#fff"/>
+  <path d="M244 590 L205 717 L389 590 Z" fill="#fff"/>
+  <text x="435" y="390" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="307" fill="#4F46E5" text-anchor="middle" dominant-baseline="central">?</text>
+  <!-- candidate bubble -->
+  <path d="M676 830 L829 922 L778 830 Z" fill="#22C55E"/>
+  <rect x="521" y="562" width="360" height="268" rx="62" fill="#22C55E" stroke="#fff" stroke-width="18"/>
+  <polyline points="609,696 671,758 795,624" fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
