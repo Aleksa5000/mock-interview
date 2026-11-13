@@ -24,6 +24,7 @@ Made for vibe coders, self-taught developers and anyone preparing for a develope
 - 🔍 **Reads your project.** It scans the README, manifests, git history and key files, then asks about *your* code ("Walk me through `useCart`", "Why Supabase instead of your own API?"). No project in the folder? It asks for your role and stack and runs a general interview.
 - 🎯 **Covers what real interviews ask:**
   - Project deep-dive and "explain this code"
+  - **Code & algorithms**: it quotes a snippet from *your* code and asks you to explain it line by line, trace it with an input, give its complexity or find the edge case
   - Technical fundamentals for your stack
   - Debugging scenarios
   - **AI-assisted coding** ("How do you verify code the AI wrote?")
@@ -40,6 +41,8 @@ Made for vibe coders, self-taught developers and anyone preparing for a develope
   - 💬 a **stronger model answer** that uses your real project details
   - one concrete tip
 - 📄 **A Markdown report** saved to `interview-reports/` with your overall score, hiring signal, strengths, weak spots and a study plan.
+- 🎯 **Interview for a real job ad.** Paste the ad: questions cover every must-have requirement, connect them to your project, and you get a **job match** table (✅ shown / ⚠️ partial / ❌ gap), the 3 things to prepare and a ready "why I'm a good fit" pitch.
+- 📈 **Tracks your progress.** It reads your earlier reports, focuses on your weakest categories and shows a before/after table. `/mock-interview retry` re-asks only the questions you scored 3 or less on.
 - 🌍 **Speaks your language.** It answers in whatever language you write in. Switch to English mid-interview to practice.
 
 ## 📦 Install
@@ -72,6 +75,12 @@ Open Claude Code in your project folder and run:
 (When installed as a plugin, the full name is `/mock-interview:mock-interview`.)
 
 Or just say *"interview me for a junior frontend job"*.
+
+| Command | What you get |
+|---|---|
+| `/mock-interview` | A full interview about your project |
+| `/mock-interview <paste a job ad>` | An interview tailored to that position, with a job match |
+| `/mock-interview retry` | Only the questions you did badly on last time |
 
 You will pick:
 - your **role and level** (e.g. Junior Full-stack)
@@ -131,7 +140,7 @@ Your feedback decides what gets improved next.
 
 ## 🧩 Works great with
 
-**[explain-stack](https://github.com/Aleksa5000/explain-stack)** explains *why* your project uses each technology, with real file references. Run `/explain-stack` first to understand your stack, then `/mock-interview` to practice explaining it.
+**[explain-stack](https://github.com/Aleksa5000/explain-stack)** explains *why* your project uses each technology, with real file references, and `/explain-stack code` walks you through your key code and algorithms line by line. Learn it there first, then practice explaining it here with `/mock-interview` (pick the **Code & algorithms** focus).
 
 ## 🤝 Contributing
 

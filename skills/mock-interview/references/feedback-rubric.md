@@ -14,6 +14,7 @@ Judge relative to the **target level** (a junior's 4 differs from a senior's 4).
 
 Criteria by category:
 - **Project deep-dive / explain code:** accuracy about their own code, explains *why*, knows trade-offs and alternatives, admits limits honestly.
+- **Code & algorithms:** explains what *and why* for the key lines, traces the example correctly, names the pattern if there is one, gives a reasonable complexity, spots edge cases. The stronger answer should walk through the real snippet with the real values.
 - **Technical fundamentals:** correctness, precision of terms, a concrete example.
 - **Debugging:** systematic process (reproduce → isolate → hypothesize → verify → fix → prevent), uses real tools (logs, debugger, network tab), not random guessing.
 - **AI-assisted coding:** shows they understand and verify AI output (reads diffs, runs/tests code, checks security and edge cases), knows where AI fails, owns the result.

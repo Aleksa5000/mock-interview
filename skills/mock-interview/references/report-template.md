@@ -7,7 +7,8 @@ Write the report in the user's language. Fill every `<…>`; drop sections that 
 
 - **Date:** <YYYY-MM-DD HH:MM>
 - **Role / level:** <e.g. Junior Full-stack>
-- **Mode:** <Practice | Realistic> · **Length:** <Quick | Standard | Full>
+- **Mode:** <Practice | Realistic | Retry of <report file>> · **Length:** <Quick | Standard | Full>
+- **Job ad:** <job title — one line, only if an ad was used; no recruiter names or contacts>
 - **Project:** <name — one-line description, or "General interview (no project)">
 
 ## Summary
@@ -18,6 +19,12 @@ Write the report in the user's language. Fill every `<…>`; drop sections that 
 |---|---|
 | <Project deep-dive> | <x.x> |
 | … | … |
+
+### Progress
+<only if there is an earlier report: the table from progress.md, the biggest improvement, what's still weak, and the trend line>
+
+### Job match
+<only with a job ad: the table, match estimate, the 3 things to prepare and the pitch from job-ad.md>
 
 ### Top 3 strengths
 1. <…>

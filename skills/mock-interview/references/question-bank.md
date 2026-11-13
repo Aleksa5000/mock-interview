@@ -5,7 +5,7 @@ Use these as inspiration, not a script. Prefer project-grounded versions (see `p
 - **Mid:** trade-offs, testing, performance, API/data design, ownership stories.
 - **Senior:** architecture, scaling, reliability, security, mentoring, ambiguity, cross-team impact.
 
-Suggested mix for **Standard (~10)**: 1 warm-up, 3 project/explain-code, 1–2 fundamentals, 1 debugging or AI-assisted, 1 system design, 1 live coding, 1–2 behavioral, 1 culture fit, then "questions for us". Scale down for Quick, up for Full. Respect the user's focus choice.
+Suggested mix for **Standard (~10)**: 1 warm-up, 2 project deep-dive, 1–2 code & algorithms, 1–2 fundamentals, 1 debugging or AI-assisted, 1 system design, 1 live coding, 1–2 behavioral, 1 culture fit, then "questions for us". Scale down for Quick, up for Full. Respect the user's focus choice.
 
 ## Warm-up
 - Tell me about yourself and what you're working on right now.
@@ -21,6 +21,18 @@ Suggested mix for **Standard (~10)**: 1 warm-up, 3 project/explain-code, 1–2 f
 - How do you handle errors / loading states / invalid input in <feature>?
 - How are secrets and API keys handled? What would happen if one leaked?
 - How would you add <realistic next feature> to this codebase?
+
+## Code & algorithms (from their own code)
+Quote the snippet exactly (≤15 lines, with `path:lines`) from the "key code" in the project brief. Ask **one** of these per question, then follow up with another:
+- **Explain line by line:** "Walk me through lines 12–30. What does each important line do, and why is it there?"
+- **Trace it:** "If `ease=2.5` and `interval=6`, what does this return? Go step by step."
+- **Name it:** "Is this a known algorithm or pattern? What is it called?" (spaced repetition, binary search, debounce, memoization, backoff…)
+- **Complexity:** "What's the time complexity? What happens with 100,000 items?"
+- **Edge cases:** "What happens if the list is empty / the value is null / two requests run at once?"
+- **Why this way:** "Why sort before filtering? Why a `dict` and not a list here?"
+- **Change it:** "How would you change this to also <realistic new requirement>?"
+- **Find the bug:** if the brief noted a likely bug, ask "Do you see any problem with line 22?"
+Without a project, use a short snippet in their stack (e.g. a `debounce`, a pagination helper, a `reduce` that groups items) and ask the same questions.
 
 ## Technical fundamentals (pick by stack)
 - **JS/TS:** `==` vs `===`; closures; event loop and `async/await`; `let/const/var`; what TypeScript adds; `any` vs `unknown`.
