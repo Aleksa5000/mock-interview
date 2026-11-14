@@ -4,7 +4,7 @@ Goal: in a few minutes and with read-only tools, understand the project well eno
 
 ## Ground rules
 
-- **Use the Read, Glob and Grep tools**, not shell commands like `cat`, `head`, `sed`, `find` or `wc`. They work on every OS and don't trigger permission prompts. Only use the shell for `git log` / `git status` / `git shortlog`.
+- **Read-only.** Use the agent's file tools (Claude Code: Read, Glob, Grep), not shell commands like `cat`, `head`, `sed`, `find` or `wc`. In an agent without file tools (Codex), use only read-only shell commands (`rg --files`, `rg -n ... --glob '!**/.env*'`, `sed -n`/`Get-Content`) and never on secret files. Beyond reading files, only use the shell for `git log` / `git status` / `git shortlog`.
 - **Never open secrets:** `.env`, `.env.local`, `.env.production` (anything `.env*` except `.env.example` / `.env.sample`), `*.pem`, `*.key`, `id_rsa*`, `credentials*.json`, `secrets.*`, `*.p12`, cookie/session dumps, database files (`*.db`, `*.sqlite`) or backup folders. If you notice a secret file is committed to git, that is a good interview question ("How do you manage secrets?"); never quote its content.
 - **Skip noise:** `node_modules/`, `.venv/`, `venv/`, `dist/`, `build/`, `.next/`, `__pycache__/`, `vendor/`, `target/`, lock files (only check they exist), binaries, images, datasets, office files.
 - **Budget:** about 10–15 file reads total. Read the relevant part of a big file (use offset/limit or Grep), not the whole thing.

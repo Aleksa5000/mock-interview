@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.1 — 2026-11-14
+- Works in **Codex** too: agent-neutral instructions (file tools in Claude Code, read-only shell with `.env` excluded in Codex), `$skill` commands in Codex, numbered-list questions when there's no question tool. Install steps for Codex in the README.
+
 All notable changes to this project. Downloads and notes for each version: [Releases](https://github.com/Aleksa5000/mock-interview/releases).
 
 ## 0.3.0 — 2026-11-13

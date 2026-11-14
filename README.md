@@ -66,6 +66,13 @@ Copy-Item -Recurse mock-interview\skills\mock-interview $HOME\.claude\skills\
 
 Restart Claude Code after installing.
 
+**Option C: Codex** (it reads the same `SKILL.md` format)
+```
+codex plugin marketplace add Aleksa5000/mock-interview
+codex plugin add mock-interview@mock-interview
+```
+Or copy the folder: `cp -r mock-interview/skills/mock-interview ~/.agents/skills/`. In Codex, run it with `$mock-interview` instead of `/mock-interview`.
+
 ## 🚀 Usage
 
 Open Claude Code in your project folder and run:
