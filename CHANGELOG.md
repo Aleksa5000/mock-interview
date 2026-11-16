@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.0 — 2026-11-16
+- **Stays with your project:** after an interview in a project, a later session there offers once a short practice round on the new work, when 5+ commits (or 10+ changed files) piled up since your last report. It never starts an interview by itself. Turn it off with `/mock-interview watch off`.
+
 ## 0.4.0 — 2026-11-16
 - **Asks about the code as it is now:** re-reads code right before every question about it, records the code version in the report, and the next interview finds what changed since then and asks about the new work (and about fixed weak spots).
 

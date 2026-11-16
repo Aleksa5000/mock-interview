@@ -1,7 +1,7 @@
 {
   "name": "mock-interview",
   "displayName": "Mock Interview",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Realistic mock job interviews grounded in your own project. Scores every answer, shows a stronger model answer and saves a Markdown report.",
   "author": {
     "name": "Aleksa Djorovic",

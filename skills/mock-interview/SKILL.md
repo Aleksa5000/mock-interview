@@ -1,7 +1,7 @@
 ---
 name: mock-interview
 description: Run a realistic mock job interview for developers and vibe coders, grounded in the project in the current folder (or a chosen role and stack when there is no project). Asks one question at a time across technical, project deep-dive, code & algorithms (explain key lines, trace an algorithm with an input, complexity, edge cases), behavioral (STAR), system design, live coding, debugging, AI-assisted coding and culture-fit categories, scores every answer, explains what was missing and shows a stronger model answer, then saves a Markdown report. Paste a job ad to get an interview tailored to that exact position, with a job-match table (shown / partial / gap). Tracks progress across interviews and "/mock-interview retry" re-asks only the questions you did badly on. Use when the user says "mock interview", "interview me", "practice job interview", "prepare me for an interview", "pripremi me za intervju", "simuliraj intervju", or wants to practice explaining their project to employers, or pastes a job ad and asks to prepare for it.
-argument-hint: "[retry | paste a job ad]"
+argument-hint: "[retry | paste a job ad | watch off]"
 allowed-tools: Read Glob Grep Bash(git log:*) Bash(git status:*) Bash(git shortlog:*) Bash(git diff:*) Bash(git rev-parse:*)
 ---
 
@@ -90,11 +90,11 @@ When the planned questions are done (or the user types `end`):
    - With an earlier report: the **Progress** table (`references/progress.md`).
 3. If the interview ended early, base the score only on answered questions and say the sample is small.
 4. Save the full report using `references/report-template.md` to `interview-reports/mock-interview-YYYY-MM-DD-HHMM.md` in the current directory (create the folder; use local time). If writing is not possible, print the report in chat instead.
-5. Tell the user where it was saved. If the directory is a git repo and `interview-reports/` is not ignored, suggest adding it to `.gitignore` (don't edit it without asking).
+5. Run `node "<this skill's folder>/scripts/watch.mjs" on` and tell the user where the report was saved. Add one line: "When you've built more here, I'll offer a short practice round on the new work in a later session (turn off: `/mock-interview watch off`)." `/mock-interview watch off` runs `watch.mjs off` and ends there. If the directory is a git repo and `interview-reports/` is not ignored, suggest adding it to `.gitignore` (don't edit it without asking).
 6. Offer: "Want to retry the weakest questions now?"
 7. **Ask for feedback once**, as the last line of the wrap-up, in the user's language. Keep it to one or two lines and don't push. Give a prefilled link to the GitHub feedback form:
 
-   `https://github.com/Aleksa5000/mock-interview/issues/new?template=feedback.yml&version=0.4.0&session=<SESSION>`
+   `https://github.com/Aleksa5000/mock-interview/issues/new?template=feedback.yml&version=0.5.0&session=<SESSION>`
 
    `<SESSION>` is a short **percent-encoded** summary with no code, no answers and no project names, e.g. `Junior Full-stack · Practice · 10 questions · English · own project` (use `general` instead of `own project` when there was no project; add `job ad` or `retry` when used). Example line: "Did this help? Tell me what to improve (takes 1 minute): <link>". Never send anything yourself. The user opens the link, sees everything, and decides whether to submit.
    If the user retries questions afterwards, don't ask again in the same session.

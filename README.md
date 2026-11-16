@@ -44,6 +44,7 @@ Made for vibe coders, self-taught developers and anyone preparing for a develope
 - 🎯 **Interview for a real job ad.** Paste the ad: questions cover every must-have requirement, connect them to your project, and you get a **job match** table (✅ shown / ⚠️ partial / ❌ gap), the 3 things to prepare and a ready "why I'm a good fit" pitch.
 - 📈 **Tracks your progress.** It reads your earlier reports, focuses on your weakest categories and shows a before/after table. `/mock-interview retry` re-asks only the questions you scored 3 or less on.
 - 🌍 **Speaks your language.** It answers in whatever language you write in. Switch to English mid-interview to practice.
+- 🔁 **Notices when you've built something new.** After your first interview in a project, a later session there offers once a short practice round about the new work (5+ new commits). Turn it off with `/mock-interview watch off`.
 
 ## 📦 Install
 

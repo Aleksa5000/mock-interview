@@ -1,0 +1,17 @@
+{
+  "description": "mock-interview: after enough new work since your last mock interview in a project, offer once a short practice round. Never starts one by itself.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/skills/mock-interview/scripts/watch.mjs\" hook",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
