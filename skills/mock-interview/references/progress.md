@@ -6,8 +6,9 @@ Reports live in `interview-reports/mock-interview-*.md` in the current folder. O
 
 1. Glob `interview-reports/mock-interview-*.md`. If there are none, skip this section.
 2. Read the **latest** report (by the date in the file name). Read up to 2 older ones too, if they exist.
-3. Tell the user in one or two lines, before the first question: "Last time (2026-11-10): 3.1/5. Weakest: System design 2.0, Debugging 2.5. I'll include those today."
-4. When planning, give the **weakest 1–2 categories** at least one question each, unless the user's focus choice excludes them. **Don't repeat the exact same questions.** Ask new questions on the same topic (that's what `retry` is for).
+3. **Find what changed in the code since that report.** Its header has the code version. With git: `git log --oneline <report commit>..HEAD` and `git diff --stat <report commit> -- . ':!*.env*' ':!*.pem' ':!*.key' ':!*secret*' ':!*credentials*' ':!*.db' ':!*.sqlite'`; without git, compare the files the report mentions with what you find now. New features, fixed weak spots and rewritten files are great material: plan at least one question about what's new, and if a weak spot from last time is fixed now, say so and ask about the fix.
+4. Tell the user in one or two lines, before the first question: "Last time (2026-11-10): 3.1/5. Weakest: System design 2.0, Debugging 2.5. I'll include those today."
+5. When planning, give the **weakest 1–2 categories** at least one question each, unless the user's focus choice excludes them. **Don't repeat the exact same questions.** Ask new questions on the same topic (that's what `retry` is for).
 
 ## In the wrap-up
 
@@ -31,6 +32,6 @@ The user wants to practice only the questions they did badly on.
 1. Read the latest report. If there is none, say so and offer a normal interview.
 2. Pick the questions scored **≤ 3** or marked "Skipped" (max 8, weakest first). If none, say "Nothing below 4 last time. Nice!", then offer the weakest category or a harder level.
 3. Skip the setup questions. Use the role, level and mode from the report (default Practice), and say so in one line: "Retrying 4 questions from 2026-11-10 (Junior Full-stack, Practice). Type `end` to stop."
-4. Re-ask each question in the **same words**, numbered "Retry 2/4 · <Category>". If the code it refers to has changed since, re-check the file first and adapt the question. Never show the old stronger answer before the user tries again.
+4. Re-ask each question in the **same words**, numbered "Retry 2/4 · <Category>". **Always re-read the code it refers to first** (and with git, `git diff --stat <report commit>` for those files): if it changed since the report, adapt the question to the current code and say so ("You've changed `checkout.ts` since then, so the question is about the new version"). Never show the old stronger answer before the user tries again.
 5. Give the normal feedback block, plus one line: **Before → now: 2/5 → 4/5**, and what specifically got better.
 6. Wrap-up: a before/now table for the retried questions, an overall verdict, and what's still weak. Save it as a normal report with `**Mode:** Retry of <old report file name>` in the header. Ask for feedback once, as usual.

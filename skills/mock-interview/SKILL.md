@@ -2,7 +2,7 @@
 name: mock-interview
 description: Run a realistic mock job interview for developers and vibe coders, grounded in the project in the current folder (or a chosen role and stack when there is no project). Asks one question at a time across technical, project deep-dive, code & algorithms (explain key lines, trace an algorithm with an input, complexity, edge cases), behavioral (STAR), system design, live coding, debugging, AI-assisted coding and culture-fit categories, scores every answer, explains what was missing and shows a stronger model answer, then saves a Markdown report. Paste a job ad to get an interview tailored to that exact position, with a job-match table (shown / partial / gap). Tracks progress across interviews and "/mock-interview retry" re-asks only the questions you did badly on. Use when the user says "mock interview", "interview me", "practice job interview", "prepare me for an interview", "pripremi me za intervju", "simuliraj intervju", or wants to practice explaining their project to employers, or pastes a job ad and asks to prepare for it.
 argument-hint: "[retry | paste a job ad]"
-allowed-tools: Read Glob Grep Bash(git log:*) Bash(git status:*) Bash(git shortlog:*)
+allowed-tools: Read Glob Grep Bash(git log:*) Bash(git status:*) Bash(git shortlog:*) Bash(git diff:*) Bash(git rev-parse:*)
 ---
 
 # Mock Interview
@@ -49,6 +49,11 @@ Look at the current working directory.
 
 **Previous interviews:** if `interview-reports/` has earlier reports, follow "Before a normal interview" in `references/progress.md`: one line about last time, and include the weakest categories.
 
+**Fresh code, always.** Ask only about the code as it is now:
+- Note the code version when you analyze it (`git rev-parse --short HEAD` and whether `git status --short` shows changes; or "no git" and the date). It goes into the report.
+- **Right before every question that quotes or names code, re-read those lines.** The user (or another agent) may change the project during the interview, and a question about code that no longer exists is worse than no question. If it changed, adapt the question or pick another.
+- If the user says they changed or fixed something, re-read it before you give feedback on it.
+
 Never invent details about the project. Only ask about things you actually saw, and cite them (`src/auth/session.ts`, "your `useCart` hook"). Never open `.env` or other secret files (see the ground rules in `references/project-analysis.md`).
 
 If the user's answers contradict the code (wrong stack, wrong behavior), say so in feedback and point to the file. Interviewers check GitHub, and a wrong claim about your own project costs more than "I don't know".
@@ -89,7 +94,7 @@ When the planned questions are done (or the user types `end`):
 6. Offer: "Want to retry the weakest questions now?"
 7. **Ask for feedback once**, as the last line of the wrap-up, in the user's language. Keep it to one or two lines and don't push. Give a prefilled link to the GitHub feedback form:
 
-   `https://github.com/Aleksa5000/mock-interview/issues/new?template=feedback.yml&version=0.3.1&session=<SESSION>`
+   `https://github.com/Aleksa5000/mock-interview/issues/new?template=feedback.yml&version=0.4.0&session=<SESSION>`
 
    `<SESSION>` is a short **percent-encoded** summary with no code, no answers and no project names, e.g. `Junior Full-stack · Practice · 10 questions · English · own project` (use `general` instead of `own project` when there was no project; add `job ad` or `retry` when used). Example line: "Did this help? Tell me what to improve (takes 1 minute): <link>". Never send anything yourself. The user opens the link, sees everything, and decides whether to submit.
    If the user retries questions afterwards, don't ask again in the same session.

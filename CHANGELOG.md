@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.0 — 2026-11-16
+- **Asks about the code as it is now:** re-reads code right before every question about it, records the code version in the report, and the next interview finds what changed since then and asks about the new work (and about fixed weak spots).
+
 ## 0.3.1 — 2026-11-14
 - Works in **Codex** too: agent-neutral instructions (file tools in Claude Code, read-only shell with `.env` excluded in Codex), `$skill` commands in Codex, numbered-list questions when there's no question tool. Install steps for Codex in the README.
 

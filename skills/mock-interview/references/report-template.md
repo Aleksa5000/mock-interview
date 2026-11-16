@@ -10,6 +10,7 @@ Write the report in the user's language. Fill every `<…>`; drop sections that 
 - **Mode:** <Practice | Realistic | Retry of <report file>> · **Length:** <Quick | Standard | Full>
 - **Job ad:** <job title — one line, only if an ad was used; no recruiter names or contacts>
 - **Project:** <name — one-line description, or "General interview (no project)">
+- **Code version:** <commit short sha, "clean" or "with uncommitted changes" | "no git, <YYYY-MM-DD HH:MM>">
 
 ## Summary
 
