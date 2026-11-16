@@ -73,6 +73,24 @@ codex plugin add mock-interview@mock-interview
 ```
 Or copy the folder: `cp -r mock-interview/skills/mock-interview ~/.agents/skills/`. In Codex, run it with `$mock-interview` instead of `/mock-interview`.
 
+## 🔄 Stay up to date
+
+New versions come out often. Turn on automatic updates once, and you'll always have the latest:
+
+**Claude Code** (third-party plugins don't auto-update by default):
+- In Claude Code: `/plugin` → **Marketplaces** → **mock-interview** → **Enable auto-update**
+- Or add `"autoUpdate": true` to the marketplace in `~/.claude/settings.json`:
+  ```json
+  "extraKnownMarketplaces": {
+    "mock-interview": { "source": { "source": "github", "repo": "Aleksa5000/mock-interview" }, "autoUpdate": true }
+  }
+  ```
+Claude Code then checks for updates in the background and installs them; run `/reload-plugins` or restart to use the new version. To update right away: `claude plugin marketplace update mock-interview` and `claude plugin update mock-interview@mock-interview`.
+
+**Codex** (no automatic plugin updates yet): `codex plugin marketplace upgrade mock-interview`
+
+**Manual copy:** `git pull` in your clone and copy `skills/mock-interview` again.
+
 ## 🚀 Usage
 
 Open Claude Code in your project folder and run:
